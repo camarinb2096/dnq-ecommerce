@@ -3,6 +3,7 @@ import Home from '../Home'
 import Login from '../Login'
 import Register from '../Register'
 import NotFound from '../NotFound'
+import Navbar from '../../Components/Navbar'
 
 import './App.css'
 
@@ -22,6 +23,7 @@ const App = () => {
     <div className="App">
       <BrowserRouter> 
         <AppRoutes />
+        <Navbar />
       </BrowserRouter>  
     </div>
   )
