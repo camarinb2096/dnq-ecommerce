@@ -15,10 +15,10 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <div class="sm:flex items-center bg-white font-bold rounded-lg overflow-hidden px-2 py-1 justify-between">
-					    <input class="text-base text-black font-bold flex-grow outline-none px-2" type="text" placeholder="Encuentra tu repuesto" />
-					      <div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto ">
-						    <button class="bg-red-400 text-white text-base rounded-xl px-4 py-2 font-bold">Buscar</button>
+                    <div class="sm:flex items-center bg-white font-bold rounded-2xl overflow-hidden px-2 py-1 justify-between w-auto">
+					    <input class="text-base text-black font-bold flex-grow outline-none px-2 w-96" type="text" placeholder="Encuentra tu repuesto" />
+					      <div class="ms:flex items-center px-2 rounded-lg space-x-4 mx-auto">
+						    <button class="bg-red-400 text-white text-base rounded-2xl px-4 py-2 font-bold">Buscar</button>
 					      </div>
 				    </div>    
                 </li> 
