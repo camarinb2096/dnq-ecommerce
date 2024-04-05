@@ -1,46 +1,53 @@
 import { NavLink } from "react-router-dom"
+import { IconShoppingCart } from '@tabler/icons-react';
+import { useLocation } from 'react-router-dom'
 
 const Navbar = () => {
 
     const activeStyle = 'underline text-red-500'
+    const location = useLocation()
 
     return (
-        <nav className='flex justify-between items-center w-full h-24 py-5 px-32 fixed z-10 top-0 font-bold bg-gray-200 rounded-sm'>
+        <nav className='flex justify-between items-center w-full h-24 py-5 px-48 fixed z-10 top-0 font-bold bg-gray-200 rounded-sm'>
             <ul className='flex justify-between w-auto font-bold text-xl gap-24'>
                <li>
                     <NavLink 
                     to='/' 
-                    className={({ isActive }) => isActive ? activeStyle : undefined} >
+                    activeClassName={activeStyle} >
                         <img src='../../public/dnq-motor-logo.png' alt='Logo' className="w-40"/>  
                     </NavLink>
                 </li>
             </ul>
-            <div className='flex justify-center'>
+            {location.pathname === '/' && (             
+            <div className='flex justify-center w-1/2'>
               <ul className='flex flex-row font-bold text-xl'>
                 <li>
-                    <div className="flex items-center bg-white rounded-2xl overflow-hidden shadow-md">
+                    <div className="flex justify-between gap-2 items-center bg-white rounded-2xl overflow-hidden shadow-md">
                         <input className="text-base text-black flex-grow outline-none rounded-l-2xl px-4 py-2 w-full" type="text" placeholder="Encuentra tu repuesto" />
                         <button className="bg-red-500 text-white text-base rounded-r-2xl px-6 py-2 font-bold hover:bg-red-600 transition-colors">Buscar</button>
                     </div>    
                </li> 
               </ul>
-            </div>
+            </div>)}
             <ul className='flex justify-between w-auto font-bold text-xl gap-4'>
                 <li>
                 <NavLink 
                     to='/login'
-                    className={({ isActive }) => isActive ? activeStyle : undefined} >
+                    activeClassName={activeStyle} >
                         Ingresar
                     </NavLink>
                     
                 </li>
                 <NavLink 
                     to='/register'
-                    className={({ isActive }) => isActive ? activeStyle : undefined} >
-                        Registrarse
+                    activeClassName={activeStyle} >
+                        Registrarse 
                     </NavLink>
                 <li>
-                    Mi carrito 🛒 
+                    <div className='flex justify-between gap-1'>
+                        <IconShoppingCart color='red' /> Mi carrito 
+                    </div>
+                    
                 </li>
             </ul>
         </nav>

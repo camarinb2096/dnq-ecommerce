@@ -1,8 +1,13 @@
+import Button from "../../Components/Button"
+import Layout from "../../Components/Layout/layout"
+
 function Register() {
 
     return (
-      <div className="bg-red-100">
-      </div>
+      <Layout>
+        <Button text='Register'/>
+      </Layout>
+        
     )
   }
   
