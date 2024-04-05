@@ -15,12 +15,12 @@ const Navbar = () => {
                     </NavLink>
                 </li>
             </ul>
-            <div class='flex justify-center'>
-              <ul class='flex flex-row font-bold text-xl'>
+            <div className='flex justify-center'>
+              <ul className='flex flex-row font-bold text-xl'>
                 <li>
-                    <div class="flex items-center bg-white rounded-2xl overflow-hidden shadow-md">
-                        <input class="text-base text-black flex-grow outline-none rounded-l-2xl px-4 py-2 w-full" type="text" placeholder="Encuentra tu repuesto" />
-                        <button class="bg-red-500 text-white text-base rounded-r-2xl px-6 py-2 font-bold hover:bg-red-600 transition-colors">Buscar</button>
+                    <div className="flex items-center bg-white rounded-2xl overflow-hidden shadow-md">
+                        <input className="text-base text-black flex-grow outline-none rounded-l-2xl px-4 py-2 w-full" type="text" placeholder="Encuentra tu repuesto" />
+                        <button className="bg-red-500 text-white text-base rounded-r-2xl px-6 py-2 font-bold hover:bg-red-600 transition-colors">Buscar</button>
                     </div>    
                </li> 
               </ul>
