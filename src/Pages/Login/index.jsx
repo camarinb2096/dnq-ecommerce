@@ -4,7 +4,6 @@ import Button from "../../Components/Button"
 import Input from "../../Components/Input"
 
 function LoginForm() {
-    // El hook useForm y cualquier otro código lógico deberían ir aquí
 
     return (
       <Layout>
@@ -19,12 +18,13 @@ function LoginForm() {
             <Input
               type='email'
               placeholder='Email'
-              className="text-base text-black flex-grow outline-none rounded-l-2xl px-4 py-2"
+              className='w-2/4 h-10 py-2 px-4'
               // Aquí deberías conectar este input con react-hook-form
             />
             <Input
               type='password'
               placeholder='Password'
+              className='w-2/4 h-10 py-2 px-4'
             />
             <Button text='Login' type='submit' />
           </form>
