@@ -1,15 +1,17 @@
-const Input = ({ type, placeholder, value, onChange, className }) => {
-    const defaultClassName = "text-base text-black outline-none rounded-2xl bg-white/70"
-    const combinedClassName = `${defaultClassName} ${className || ''}`
-    return (
-        <input
-            type={type}
-            placeholder={placeholder}
-            value={value}
-            onChange={onChange}
-            className={combinedClassName}
-        />
-    )
-}
+import React, { forwardRef } from 'react';
 
-export default Input
+const Input = forwardRef(({ type, placeholder, className, ...rest }, ref) => {
+  const defaultClassName = "text-base text-black outline-none rounded-2xl bg-white/70";
+  const combinedClassName = `${defaultClassName} ${className || ''}`;
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      ref={ref}
+      className={combinedClassName}
+      {...rest}
+    />
+  );
+});
+
+export default Input;

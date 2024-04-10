@@ -1,7 +1,6 @@
 import Layout from "../../Components/Layout/layout"
 import { useForm } from "react-hook-form"
 import Button from "../../Components/Button"
-import Input from "../../Components/Input"
 
 function LoginForm() {
 
@@ -15,16 +14,15 @@ function LoginForm() {
             <p className='font-bold text-5xl'>
               Ingresa tus credenciales
             </p>
-            <Input
+            <input
               type='email'
               placeholder='Email'
-              className='w-2/4 h-10 py-2 px-4'
-              // Aquí deberías conectar este input con react-hook-form
+              className='w-2/4 h-10 py-2 px-4 rounded-2xl'
             />
-            <Input
+            <input
               type='password'
               placeholder='Password'
-              className='w-2/4 h-10 py-2 px-4'
+              className='w-2/4 h-10 py-2 px-4 rounded-2xl'
             />
             <Button text='Login' type='submit' />
           </form>
