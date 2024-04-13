@@ -6,10 +6,18 @@ function Home() {
 const [items, setItems] = useState(null)
 
 useEffect(() => {
-  fetch('https://api.escuelajs.co/api/v1/products')
-  .then(response => response.json())
-  .then(data => setItems(data))
+  const fetchData = async () => {
+    const response = await fetch('http://localhost:8080/api/v1/products/')
+    const data = await response.json()
+    setItems(data.data)
+  }
+  fetchData()
+
+  // fetch('http://localhost:8080/api/v1/products/').
+  // .then(response => response.json())
+  // .then(data => setItems(data))
 }, []) 
+
 
   return (
     <Layout>
