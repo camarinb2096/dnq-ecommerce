@@ -32,7 +32,16 @@ const ProductDetail = () => {
         </figure>
         <h2 className='text-4xl font-bold text-center py-6'>{context.productToShow.name}</h2>
         <p className='text-xl text-left pl-5'>{context.productToShow.description}</p>
-        <p className='text-2xl font-semibold text-right pr-6 py-6'>${context.productToShow.price}</p>
+        <p className='text-2xl font-semibold text-right mr-5 py-6'>${context.productToShow.price}</p>
+        <div className='flex justify-end mr-5'>
+            <button className='bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700'
+                onClick={() => {
+                    context.setCount(context.count + 1)
+                    context.closeProductDetail()
+                }}>
+                Agregar al carrito
+            </button>
+        </div>
     </aside>
   );
 }

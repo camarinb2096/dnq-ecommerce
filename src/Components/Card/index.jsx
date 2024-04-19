@@ -13,7 +13,8 @@ const Card = ({ data }) => {
 
     return (
       <div className='bg-white cursor-pointer w-56 h-80 rounded-lg shadow-md shadow-red-200 flex flex-col hover:bg-gray-100 transition-transform duration-300 hover:scale-105'
-        onClick={() => showProduct(data)}>
+        onClick={() => showProduct(data)}
+        title="Ver detalle del producto">
         <figure className='relative mb-2 w-full h-4/5 rounded-t-lg overflow-hidden'>
           <img className='w-full h-full object-cover transition-transform duration-300 hover:scale-105' src={data.image} alt={data.name} />
       <div 
@@ -21,7 +22,8 @@ const Card = ({ data }) => {
          onClick={(e) => {
          e.stopPropagation();
         context.setCount(context.count + 1);
-        }}>
+        }}
+        title="Agregar al carrito">
         <IconShoppingCartUp size={20} stroke={2} color={"#f00505"} />
       </div>
           <span className='absolute bottom-0 left-0 bg-white/70 rounded-b-lg text-black font-bold px-3 py-1'>{data.name}</span>
