@@ -1,12 +1,12 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from "react"
 
-const ShoppingCartContext = createContext() 
+export const ShoppingCartContext = createContext() 
 
 export const ShoppingCartProvider = ({ children }) => {
-    const [cart, setCart] = useState([]); // Asume que el carrito es un array vacío al inicio
+    const [count, setCount] = useState(0); 
 
     return (
-        <ShoppingCartContext.Provider value={{ cart, setCart }}>
+        <ShoppingCartContext.Provider value={{ count, setCount }}>
             {children}
         </ShoppingCartContext.Provider>
     )

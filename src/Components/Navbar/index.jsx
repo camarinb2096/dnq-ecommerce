@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom"
-import { IconShoppingCart } from '@tabler/icons-react';
+import { IconShoppingCart } from '@tabler/icons-react'
 import { useLocation } from 'react-router-dom'
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../../Context'
 
 const Navbar = () => {
 
+    const context = useContext(ShoppingCartContext)
     const activeStyle = 'underline text-red-500'
     const location = useLocation()
+ 
 
     return (
         <nav className='flex justify-between items-center w-full h-24 py-5 px-48 fixed z-10 top-0 font-bold bg-gray-200 rounded-sm'>
@@ -37,10 +41,9 @@ const Navbar = () => {
                         Registrarse 
                     </NavLink>
                 <li>
-                    <div className='flex justify-between gap-1'>
-                        <IconShoppingCart color='red' /> Mi carrito 
+                    <div className='flex justify-between gap-1 text-red-500'>
+                        <IconShoppingCart color='red' /> {context.count}
                     </div>
-                    
                 </li>
             </ul>
         </nav>
