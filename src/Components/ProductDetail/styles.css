@@ -1,4 +1,29 @@
-.product-detail{
+.product-detail {
     width: 360px;
     height: calc(100vh - 96px);
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes slideOutToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+.slide-in {
+    animation: 0.5s ease-out forwards slideInFromRight;
+}
+  
+.slide-out {
+    animation: 0.5s ease-out forwards slideOutToRight;
 }
