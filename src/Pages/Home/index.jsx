@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Layout from '../../Components/Layout/layout'
 import Card from '../../Components/Card/index'
+import ProductDetail from '../../Components/ProductDetail/index'
 
 function Home() {
 const [items, setItems] = useState(null)
@@ -29,7 +30,7 @@ useEffect(() => {
         ))
       }
       </div>
-
+      <ProductDetail />
     </Layout>
   )
 }
