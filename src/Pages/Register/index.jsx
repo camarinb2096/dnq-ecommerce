@@ -70,23 +70,60 @@ function RegisterForm() {
               </p>
             </div>
             <div className='flex flex-row justify-center'> 
-              <Input name="name" type="text" placeholder="Nombre completo"  onChange={(e) => {e.target.value = e.target.value.toUpperCase();}} className='w-2/3 h-10 px-4 py-4' {...register('name', { required: true, maxLength: 100 })}/>
+              <Input 
+                name="name" 
+                type="text" 
+                placeholder="Nombre completo"  
+                onChange={(e) => {e.target.value = e.target.value.toUpperCase();}} 
+                className='w-2/3 h-10 px-4 py-4' 
+                {...register('name', { required: true, maxLength: 100 })}/>
             </div>
             <div className='flex flex-row justify-center'> 
-              <Input name="email" type="text" placeholder="Email" className='w-2/3 h-10 px-4 py-4' {...register('email', { required: true, maxLength: 100 })}/>
+              <Input 
+                name="email" 
+                type="text" 
+                placeholder="Email" 
+                className='w-2/3 h-10 px-4 py-4' 
+                {...register('email', { required: true, maxLength: 100 })}/>
             </div>
             <div className='flex flex-row justify-center'> 
-              <Input name="address" type="text" placeholder="Dirección" className='w-2/3 h-10 px-4 py-4' {...register('address', { required: true, maxLength: 100 })}/>
+              <Input 
+                name="address" 
+                type="text" 
+                placeholder="Dirección" 
+                className='w-2/3 h-10 px-4 py-4' 
+                {...register('address', { required: true, maxLength: 100 })}/>
             </div>
             <div className='flex flex-row gap-4 justify-center'>
-              <input type='text' readOnly className='px-4 py-2 w-20 bg-white border border-gray-300 rounded-2xl font-bold' value="+57" {...register('prefix')}/>
-              <Input name="phone" type="text" placeholder="Telefono" className='h-10 w-38 px-4 py-2 bg-white border border-gray-300 text-center' {...register('phone', { required: true, maxLength: 100 })}/>
+              <input 
+                type='text' readOnly 
+                className='px-4 py-2 w-20 bg-white border border-gray-300 rounded-2xl font-bold' 
+                value="+57" 
+                {...register('prefix')}/>
+              <Input 
+                name="phone" 
+                type="text" 
+                placeholder="Telefono" 
+                className='h-10 w-38 px-4 py-2 bg-white border border-gray-300 text-center' 
+                {...register('phone', { required: true, maxLength: 100 })}/>
             </div>
             <div className='flex flex-row justify-center'> 
-              <Input name="password" type="password" placeholder="Contraseña" className='w-2/3 h-10 px-4 py-4' {...register('password', { required: true, maxLength: 100 })}/>
+              <Input 
+                name="password" 
+                type="password" 
+                placeholder="Contraseña" 
+                className='w-2/3 h-10 px-4 py-4' 
+                {...register('password', { required: true, maxLength: 100 })}
+                onCopy={(e) => e.preventDefault()}/>
             </div>
             <div className='flex flex-row justify-center'> 
-              <Input name="confirmPassword" type="password" placeholder="Confirmar contraseña" className='w-2/3 h-10 px-4 py-4' {...register('confirmPassword', { required: true, maxLength: 100 })}/>
+              <Input 
+                name="confirmPassword" 
+                type="password" 
+                placeholder="Confirmar contraseña" 
+                className='w-2/3 h-10 px-4 py-4' 
+                {...register('confirmPassword', { required: true, maxLength: 100 })}
+                onCopy={(e) => e.preventDefault()}/>
             </div>
             <div className='flex flex-row justify-center'>  
               <Button type='submit' text='Registrarse'/>
