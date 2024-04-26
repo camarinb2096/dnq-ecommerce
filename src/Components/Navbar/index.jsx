@@ -16,7 +16,7 @@ const Navbar = () => {
             <ul className='flex justify-between w-auto font-bold text-xl gap-24'>
                <li>
                     <NavLink to='/' >
-                        <img src='../../public/dnq-motor-logo.png' alt='Logo' className="w-40"/>  
+                        <img src='dnq-motor-logo.png' alt='Logo' className="w-40"/>  
                     </NavLink>
                 </li>
             </ul>
