@@ -15,7 +15,20 @@ function LoginForm() {
       console.log("data", data)
       Axios.post('http://localhost:8080/api/v1/login', data)
       .then(response => {
-        console.log("response", response)
+        console.log("token", response.data.data.token)
+      })
+      .catch(error => {
+          switch (error.response.status) {
+            case 401:
+              alert('Usuario o contraseña incorrectos')
+              break;
+            case 404:
+              alert('Usuario no existe')
+              break;
+            default:
+              alert('Error inesperado')
+              break;
+        }
       })
       }
     return (
