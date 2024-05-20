@@ -34,7 +34,7 @@ function RegisterForm() {
 
   const onSubmit = (data) => {
     console.log("data", data)
-    Axios.post('http://vcloud.re:8090/api/v1/user/', data)
+    Axios.post('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/user/', data)
     .then(response => {
       // console.log("response", response)
       setMessage({ title: 'Registro Exitoso', body: 'Usuario registrado correctamente' })
