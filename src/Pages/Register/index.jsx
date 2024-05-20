@@ -34,7 +34,7 @@ function RegisterForm() {
 
   const onSubmit = (data) => {
     console.log("data", data)
-    Axios.post('http://localhost:8080/api/v1/user/', data)
+    Axios.post('http://vcloud.re:8090/api/v1/user/', data)
     .then(response => {
       // console.log("response", response)
       setMessage({ title: 'Registro Exitoso', body: 'Usuario registrado correctamente' })
@@ -136,4 +136,3 @@ function RegisterForm() {
 }
 
 export default RegisterForm
-  

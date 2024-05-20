@@ -8,15 +8,12 @@ const [items, setItems] = useState(null)
 
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch('http://localhost:8080/api/v1/products/')
+    const response = await fetch('http://vcloud.re:8090/api/v1/products/')
     const data = await response.json()
     setItems(data.data)
   }
   fetchData()
 
-  // fetch('http://localhost:8080/api/v1/products/').
-  // .then(response => response.json())
-  // .then(data => setItems(data))
 }, []) 
 
 
