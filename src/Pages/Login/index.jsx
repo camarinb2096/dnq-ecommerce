@@ -13,7 +13,7 @@ function LoginForm() {
 
     const onSubmit = (data) => {
       console.log("data", data)
-      Axios.post('http://vcloud.re:8090/api/v1/login', data)
+      Axios.post('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/login', data)
       .then(response => {
         console.log("token", response.data.data.token)
       })

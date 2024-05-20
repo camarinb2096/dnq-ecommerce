@@ -8,7 +8,7 @@ const [items, setItems] = useState(null)
 
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch('http://vcloud.re:8090/api/v1/products/')
+    const response = await fetch('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/products/')
     const data = await response.json()
     setItems(data.data)
   }
