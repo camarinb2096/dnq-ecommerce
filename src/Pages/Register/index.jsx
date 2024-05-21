@@ -62,7 +62,7 @@ function RegisterForm() {
 
   return (
     <Layout>
-      <form className='flex w-full justify-center min-h-screen bg-red-300' onSubmit={handleSubmit(onSubmit)}>
+      <form className='flex w-full justify-center min-h-screen bg-gray-600' onSubmit={handleSubmit(onSubmit)}>
           <div className='justify-center w-5/12 h-auto flex flex-col px-8 bg-gray-200 shadow-red-700 mt-32 mb-8 rounded-2xl shadow-2xl gap-9'>
             <div>
               <p className='text-5xl font-bold text-left mb-12'>

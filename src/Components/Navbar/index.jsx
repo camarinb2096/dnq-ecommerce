@@ -12,7 +12,7 @@ const Navbar = () => {
  
 
     return (
-        <nav className='flex justify-between items-center w-full h-24 py-5 px-48 fixed z-10 top-0 font-bold bg-gray-200 rounded-sm'>
+        <nav className='flex justify-between items-center w-full h-24 py-5 px-48 fixed z-10 top-0 font-bold bg-gray-600 rounded-sm'>
             <ul className='flex justify-between w-auto font-bold text-xl gap-24'>
                <li>
                     <NavLink to='/' >
