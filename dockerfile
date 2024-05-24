@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # Copia los archivos estáticos del stage de construcción al directorio de Nginx
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Copia la configuración específica del servidor Nginx
 COPY nginx.conf /etc/nginx/nginx.conf
