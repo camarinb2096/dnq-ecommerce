@@ -10,10 +10,10 @@ function LoginForm() {
           password: ''
         }
     })
-
+    const apiVersion = 'v1'
+    const loginApi = `${import.meta.env.VITE_APP_URL}${apiVersion}/login`
     const onSubmit = (data) => {
-      console.log("data", data)
-      Axios.post('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/login', data)
+      Axios.post(loginApi, data)
       .then(response => {
         console.log("token", response.data.data.token)
       })

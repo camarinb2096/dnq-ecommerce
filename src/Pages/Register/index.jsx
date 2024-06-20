@@ -31,24 +31,22 @@ function RegisterForm() {
   const [showModal, setShowModal] = useState(false)
   const [isRegistered, setIsRegistered] = useState(false)
   const navigate = useNavigate()
+  const apiVersion = 'v1'
+  const singUpApi = `${import.meta.env.VITE_APP_URL}${apiVersion}/user`
 
   const onSubmit = (data) => {
-    console.log("data", data)
-    Axios.post('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/user/', data)
+    Axios.post(singUpApi, data)
     .then(response => {
-      // console.log("response", response)
       setMessage({ title: 'Registro Exitoso', body: 'Usuario registrado correctamente' })
       setShowModal(true);
       setIsRegistered(true)
       reset()
     })
     .catch(error => {
-      console.log("error", error)
       setMessage({ title: 'Registro Fallido', body: String(error.response.data.error)})
       setShowModal(true)
     })
   }
-  // console.log("Errores", errors)
   const closeModal = () => {
     setShowModal(false); 
     if (isRegistered) {
