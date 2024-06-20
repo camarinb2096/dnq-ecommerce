@@ -8,13 +8,16 @@ const [items, setItems] = useState(null)
 
 useEffect(() => {
   const fetchData = async () => {
-    const response = await fetch('https://dnq-test-backend.ylfoqu.easypanel.host/api/v1/products/')
+    const apiVersion = 'v1'
+    const productsApi = `${import.meta.env.VITE_APP_URL}${apiVersion}/products`
+    const response = await fetch(productsApi)
     const data = await response.json()
     setItems(data.data)
   }
+  
   fetchData()
 
-}, []) 
+}, [])
 
 
   return (
