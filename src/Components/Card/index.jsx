@@ -12,7 +12,7 @@ const Card = ({ data }) => {
   }
 
     return (
-      <div className='bg-white cursor-pointer w-56 h-80 rounded-lg shadow-md shadow-red-200 flex flex-col hover:bg-gray-100 transition-transform duration-300 hover:scale-105'
+      <div className='bg-white cursor-pointer w-full sm:w-56 h-80 rounded-lg shadow-md shadow-red-200 flex flex-col hover:bg-gray-100 transition-transform duration-300 hover:scale-105'
         onClick={() => showProduct(data)}
         title="Ver detalle del producto">
         <figure className='relative mb-2 w-full h-4/5 rounded-t-lg overflow-hidden'>
